@@ -20,13 +20,42 @@ namespace ossm
     /// </summary>
     public partial class MainWindow : Window
     {
+        
+        List<string> data = new List<string>();
         public MainWindow()
         {
             InitializeComponent();
+            fillComboBox();
+        
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
+
+        }
+        //Populate the combo box
+        public void fillComboBox()
+        {
+            
+            List<Subject> subjects = appDriver.getSubjects();
+           subjects.ForEach(Subject => data.Add(Subject.getCode().ToString()));
+            
+            
+            ClassComboBox.ItemsSource = data; 
+        }
+        public void fillComboBox(string a)
+        {
+             data.Add(a);
+            ClassComboBox.ItemsSource = data;
+        }
+
+        private void addClass(object sender, RoutedEventArgs e)
+        {
+            Window newWindow = new addClassWindow();
+            newWindow.Show();
+            this.Close();
+            
+            
 
         }
     }

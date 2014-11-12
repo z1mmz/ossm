@@ -6,9 +6,10 @@
     <Grid Background="Ivory">
         <Label Content="Welcome to OSSM" HorizontalContentAlignment="Center" HorizontalAlignment="Center" VerticalAlignment="Top" Height="67" Width="692" Background="ForestGreen" Foreground="White" FontSize="20" />
         <Button Content="View Time table" HorizontalAlignment="Left" Margin="71,113,0,0" VerticalAlignment="Top" Width="103" Height="27" Click="Button_Click"/>
-        <ComboBox HorizontalAlignment="Left" Height="27" Margin="71,218,0,0" VerticalAlignment="Top" Width="390" RenderTransformOrigin="-1.108,0.913"/>
+        <ComboBox x:Name="ClassComboBox" HorizontalAlignment="Left" Height="27" Margin="71,218,0,0" VerticalAlignment="Top" Width="390" RenderTransformOrigin="-1.108,0.913"/>
         <Label Content="Select Class" HorizontalAlignment="Left" Margin="71,187,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.509,-0.293"/>
         <Button Content="View Notes" HorizontalAlignment="Left" Margin="497,218,0,0" VerticalAlignment="Top" Width="103" Height="27" Click="Button_Click"/>
+        <Button x:Name="addClassButton" Content="Add Class" HorizontalAlignment="Left" Margin="195,113,0,0" VerticalAlignment="Top" Width="103" Height="27" Click="addClass"/>
 
     </Grid>
 </Window>

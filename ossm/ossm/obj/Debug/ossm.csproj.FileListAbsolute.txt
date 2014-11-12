@@ -11,3 +11,18 @@ C:\Users\wolf\Documents\GitHub\ossm\ossm\ossm\obj\Debug\ossm.Properties.Resource
 C:\Users\wolf\Documents\GitHub\ossm\ossm\ossm\obj\Debug\ossm.csproj.GenerateResource.Cache
 C:\Users\wolf\Documents\GitHub\ossm\ossm\ossm\obj\Debug\ossm.exe
 C:\Users\wolf\Documents\GitHub\ossm\ossm\ossm\obj\Debug\ossm.pdb
+C:\Users\wolf\Documents\Visual Studio 2013\Projects\ossm\ossm\ossm\bin\Debug\ossm.exe.config
+C:\Users\wolf\Documents\Visual Studio 2013\Projects\ossm\ossm\ossm\obj\Debug\ossm.exe
+C:\Users\wolf\Documents\Visual Studio 2013\Projects\ossm\ossm\ossm\obj\Debug\ossm.pdb
+C:\Users\wolf\Documents\Visual Studio 2013\Projects\ossm\ossm\ossm\bin\Debug\ossm.exe
+C:\Users\wolf\Documents\Visual Studio 2013\Projects\ossm\ossm\ossm\bin\Debug\ossm.pdb
+C:\Users\wolf\Documents\Visual Studio 2013\Projects\ossm\ossm\ossm\obj\Debug\ossm.csprojResolveAssemblyReference.cache
+C:\Users\wolf\Documents\Visual Studio 2013\Projects\ossm\ossm\ossm\obj\Debug\MainWindow.baml
+C:\Users\wolf\Documents\Visual Studio 2013\Projects\ossm\ossm\ossm\obj\Debug\MainWindow.g.cs
+C:\Users\wolf\Documents\Visual Studio 2013\Projects\ossm\ossm\ossm\obj\Debug\App.g.cs
+C:\Users\wolf\Documents\Visual Studio 2013\Projects\ossm\ossm\ossm\obj\Debug\ossm_MarkupCompile.cache
+C:\Users\wolf\Documents\Visual Studio 2013\Projects\ossm\ossm\ossm\obj\Debug\ossm.g.resources
+C:\Users\wolf\Documents\Visual Studio 2013\Projects\ossm\ossm\ossm\obj\Debug\ossm.Properties.Resources.resources
+C:\Users\wolf\Documents\Visual Studio 2013\Projects\ossm\ossm\ossm\obj\Debug\ossm.csproj.GenerateResource.Cache
+C:\Users\wolf\Documents\Visual Studio 2013\Projects\ossm\ossm\ossm\obj\Debug\addClassWindow.baml
+C:\Users\wolf\Documents\Visual Studio 2013\Projects\ossm\ossm\ossm\obj\Debug\addClassWindow.g.cs

@@ -7,12 +7,13 @@ using System.Threading.Tasks;
 
 namespace ossm
 {
-    class Subject
+    [Serializable()]
+    public class Subject
     {
-        private int subjectCode;
+        private string subjectCode;
         private SubjectClass[] classes;
         private Assignment[] assignments;
-        public Subject(int subjectCode)//Default contruct
+        public Subject(string subjectCode)//Default contruct
         {
             this.subjectCode = subjectCode;
         }
@@ -27,6 +28,10 @@ namespace ossm
             info.AddValue("SubjectCode", subjectCode);
             info.AddValue("SubjectClass", classes);
             info.AddValue("Assignments", assignments);
+        }
+        public string getCode()
+        {
+            return subjectCode;
         }
         
 
