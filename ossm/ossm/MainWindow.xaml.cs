@@ -58,5 +58,20 @@ namespace ossm
             
 
         }
+
+        private void ClassComboBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+          
+            
+            
+        }
+
+        private void viewNotesClick(object sender, RoutedEventArgs e)
+        {
+            ComboBox test = ClassComboBox;
+            string text = test.Text;
+            TextBox box = testBox;
+            box.Text = text;
+        }
     }
 }

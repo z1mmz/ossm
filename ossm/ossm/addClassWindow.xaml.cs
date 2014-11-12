@@ -35,6 +35,7 @@ namespace ossm
            appDriver.addSubject(code);
            Window MainWindow = new MainWindow();
            MainWindow.Show();
+           this.Close();
             
         }
 
