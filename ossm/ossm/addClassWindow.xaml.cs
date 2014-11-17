@@ -19,9 +19,16 @@ namespace ossm
     /// </summary>
     public partial class addClassWindow : Window
     {
+        private appDriver _appDriver;
+        
         public addClassWindow()
         {
             InitializeComponent();
+        }
+        public addClassWindow(appDriver _appDriver)
+        {
+            InitializeComponent();
+            this._appDriver = _appDriver;
         }
 
         private void TextBox_TextChanged(object sender, TextChangedEventArgs e)
@@ -32,7 +39,8 @@ namespace ossm
         private void AddSubjectClick(object sender, RoutedEventArgs e)
         {
             string code = subjectCodeText.Text;
-           appDriver.addSubject(code);
+           _appDriver.addSubject(code);
+           appDriver.saveToFile(_appDriver);
            Window MainWindow = new MainWindow();
            MainWindow.Show();
            this.Close();

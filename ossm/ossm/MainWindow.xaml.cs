@@ -20,11 +20,14 @@ namespace ossm
     /// </summary>
     public partial class MainWindow : Window
     {
+        private appDriver _appDriver;
         
         List<string> data = new List<string>();
         public MainWindow()
         {
+             
             InitializeComponent();
+            _appDriver = appDriver.loadFromFile();
             fillComboBox();
         
         }
@@ -37,7 +40,7 @@ namespace ossm
         public void fillComboBox()
         {
             
-            List<Subject> subjects = appDriver.getSubjects();
+            List<Subject> subjects = _appDriver.getSubjects();
            subjects.ForEach(Subject => data.Add(Subject.getCode().ToString()));
             
             
@@ -51,7 +54,7 @@ namespace ossm
 
         private void addClass(object sender, RoutedEventArgs e)
         {
-            Window newWindow = new addClassWindow();
+            Window newWindow = new addClassWindow(_appDriver);
             newWindow.Show();
             this.Close();
             
@@ -73,5 +76,10 @@ namespace ossm
             TextBox box = testBox;
             box.Text = text;
         }
+        //protected override void OnClosed(EventArgs e)
+        //{
+        //    appDriver.saveToFile(_appDriver);
+        //    base.OnClosed(e);
+        //}
     }
 }
