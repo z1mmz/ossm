@@ -8,11 +8,13 @@ using System.IO;
 using System.Runtime.Serialization.Formatters.Binary;
 /*
  * AUTHOR WOLF ZIMMERMANN 2014
- * Main class
+ * Main class most data manipulation will take place here
+ * Class is not static anymore you need to create a referance for it in your class and save it using saveToFile(_appData)
  * Windows pass Data to this class
  * KEEP PROCESSING OUT OF GUI CLASSES
+ * THIS CLASS IS SERIALIZED TO SAVE DATA CLASSES in array
+ * I know this is not ideal but hey it works
  * 
- * C# != JAVA
  */
 
  
@@ -78,7 +80,7 @@ namespace ossm
             }
             finally
             {
-                fileStream.Close();
+                if (fileStream != null)fileStream.Close();
             }
         }
         

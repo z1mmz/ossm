@@ -25,6 +25,7 @@ namespace ossm
         {
             InitializeComponent();
         }
+        //get pass instance of appDriver
         public addClassWindow(appDriver _appDriver)
         {
             InitializeComponent();
@@ -40,6 +41,10 @@ namespace ossm
         {
             string code = subjectCodeText.Text;
            _appDriver.addSubject(code);
+            /* do rest of loading for class data here 
+             * will implement methods in appDriver
+             */
+            // save appDriver as it will be reloaded in mainwindow
            appDriver.saveToFile(_appDriver);
            Window MainWindow = new MainWindow();
            MainWindow.Show();
