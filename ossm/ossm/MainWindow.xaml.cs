@@ -15,6 +15,29 @@ using System.Windows.Shapes;
 
 namespace ossm
 {
+
+    //         _______                   _____                    _____                    _____          
+    //        /::\    \                 /\    \                  /\    \                  /\    \         
+    //       /::::\    \               /::\    \                /::\    \                /::\____\        
+    //      /::::::\    \             /::::\    \              /::::\    \              /::::|   |        
+    //     /::::::::\    \           /::::::\    \            /::::::\    \            /:::::|   |        
+    //    /:::/~~\:::\    \         /:::/\:::\    \          /:::/\:::\    \          /::::::|   |        
+    //   /:::/    \:::\    \       /:::/__\:::\    \        /:::/__\:::\    \        /:::/|::|   |        
+    //  /:::/    / \:::\    \      \:::\   \:::\    \       \:::\   \:::\    \      /:::/ |::|   |        
+    // /:::/____/   \:::\____\   ___\:::\   \:::\    \    ___\:::\   \:::\    \    /:::/  |::|___|______  
+    //|:::|    |     |:::|    | /\   \:::\   \:::\    \  /\   \:::\   \:::\    \  /:::/   |::::::::\    \ 
+    //|:::|____|     |:::|    |/::\   \:::\   \:::\____\/::\   \:::\   \:::\____\/:::/    |:::::::::\____\
+    // \:::\    \   /:::/    / \:::\   \:::\   \::/    /\:::\   \:::\   \::/    /\::/    / ~~~~~/:::/    /
+    //  \:::\    \ /:::/    /   \:::\   \:::\   \/____/  \:::\   \:::\   \/____/  \/____/      /:::/    / 
+    //   \:::\    /:::/    /     \:::\   \:::\    \       \:::\   \:::\    \                  /:::/    /  
+    //    \:::\__/:::/    /       \:::\   \:::\____\       \:::\   \:::\____\                /:::/    /   
+    //     \::::::::/    /         \:::\  /:::/    /        \:::\  /:::/    /               /:::/    /    
+    //      \::::::/    /           \:::\/:::/    /          \:::\/:::/    /               /:::/    /     
+    //       \::::/    /             \::::::/    /            \::::::/    /               /:::/    /      
+    //        \::/____/               \::::/    /              \::::/    /               /:::/    /       
+    //         ~~                      \::/    /                \::/    /                \::/    /        
+    //                                  \/____/                  \/____/                  \/____/                                             
+
     /// <summary>
     /// Interaction logic for MainWindow.xaml
     /// main application window
@@ -66,12 +89,12 @@ namespace ossm
             this.Close();
         }
 
-        //private void ClassComboBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
-        //{
+        private void ClassComboBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
           
             
             
-        //}
+        }
         
         // view details button starts new window for interaction with subject
         private void viewNotesClick(object sender, RoutedEventArgs e)
@@ -95,5 +118,10 @@ namespace ossm
             appDriver.saveToFile(_appDriver);
             base.OnClosed(e);
         }
+
+       private void timeTableButton_Click(object sender, RoutedEventArgs e)
+       {
+
+       }
     }
 }
