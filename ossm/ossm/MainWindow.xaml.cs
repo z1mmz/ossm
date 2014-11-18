@@ -17,6 +17,7 @@ namespace ossm
 {
     /// <summary>
     /// Interaction logic for MainWindow.xaml
+    /// main application window
     /// </summary>
     public partial class MainWindow : Window
     {
@@ -33,49 +34,51 @@ namespace ossm
         
         }
 
-        private void Button_Click(object sender, RoutedEventArgs e)
-        {
+        //private void Button_Click(object sender, RoutedEventArgs e)
+        //{
 
-        }
+        //}
+
         //Populate the combo box
         public void fillComboBox()
         {
             
            subjects = _appDriver.getSubjects();
            subjects.ForEach(Subject => data.Add(Subject.getCode().ToString()));
-            
+           data.Sort();
             
             ClassComboBox.ItemsSource = data; 
         }
-        public void fillComboBox(string a)
-        {
-             data.Add(a);
-            ClassComboBox.ItemsSource = data;
-        }
+        //TEST FUNCTION
+        //public void fillComboBox(string a)
+        //{
+        //     data.Add(a);
+        //    ClassComboBox.ItemsSource = data;
+        //}
 
+        //Add subject button 
         private void addClass(object sender, RoutedEventArgs e)
         {
+            //starts new addClasswindow
             Window newWindow = new addClassWindow(_appDriver);
             newWindow.Show();
+            //closes main window which causes appDriver to save
             this.Close();
-            
-            
-
         }
 
-        private void ClassComboBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
-        {
+        //private void ClassComboBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        //{
           
             
             
-        }
-
+        //}
+        
+        // view details button starts new window for interaction with subject
         private void viewNotesClick(object sender, RoutedEventArgs e)
         {
             ComboBox test = ClassComboBox;
             string text = test.Text;
-            TextBox box = testBox;
-            box.Text = text;
+
             for (int i = 0; i < subjects.Count; i++)
             {
                 if (subjects[i].getCode() == text)
@@ -86,6 +89,7 @@ namespace ossm
             }
             
         }
+        //onclose overide to make appDriver save
        protected override void OnClosed(EventArgs e)
         {
             appDriver.saveToFile(_appDriver);

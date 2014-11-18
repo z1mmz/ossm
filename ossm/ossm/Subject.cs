@@ -1,4 +1,5 @@
 ﻿using System;
+using System.IO;
 using System.Collections.Generic;
 using System.Linq;
 using System.Runtime.Serialization;
@@ -15,13 +16,20 @@ namespace ossm
         public string subjectName { get; set; }
         private SubjectClass[] classes { get; set; }
         private List<Assignment> assignments;
+        private string filePath;
 
-        public Subject(string subjectCode, string subjectDesc, string subjectName)//Default contruct
+        public Subject(string subjectCode, string subjectDesc, string subjectName)//constructor
         {
             this.subjectCode = subjectCode;
             this.subjectDesc = subjectDesc;
             this.subjectName = subjectName;
+            this.filePath = System.Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments)+"\\" +"OSSM"+"\\" + subjectCode ;
+            if (!Directory.Exists(filePath))
+            {
+                Directory.CreateDirectory(this.filePath);
+            }
         }
+
         //No longer used due to update using appdriver saving array of objects
         //public Subject(SerializationInfo info, StreamingContext ctxt)//serial constructor
         //{
