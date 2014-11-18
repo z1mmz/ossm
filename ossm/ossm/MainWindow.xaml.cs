@@ -80,16 +80,16 @@ namespace ossm
             {
                 if (subjects[i].getCode() == text)
                 {
-                    Window subjectDetailWindow = new SubjectDetails(subjects[i]);
+                    Window subjectDetailWindow = new SubjectDetails(subjects[i],_appDriver);
                     subjectDetailWindow.Show();
                 }
             }
             
         }
-        //protected override void OnClosed(EventArgs e)
-        //{
-        //    appDriver.saveToFile(_appDriver);
-        //    base.OnClosed(e);
-        //}
+       protected override void OnClosed(EventArgs e)
+        {
+            appDriver.saveToFile(_appDriver);
+            base.OnClosed(e);
+        }
     }
 }

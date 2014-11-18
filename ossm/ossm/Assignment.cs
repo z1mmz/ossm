@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace ossm
 {
-    class Assignment
+    public class Assignment
     {
         private String name;
         private DateTime dueDate;
@@ -17,12 +17,18 @@ namespace ossm
             this.dueDate = dueDate;
             this.description = description;
         }
-        public Boolean save()
+        public string getAssignmentString()
         {
-    
-            // do object saving here
-            return true;
+            string returnString = name + " Due Date " + dueDate + " Decription " + description;
+            return returnString;
         }
+        //No longer needed as appDriver saves all classes in array
+        //public Boolean save()
+        //{
+    
+        //    // do object saving here
+        //    return true;
+        //}
 
 
     }

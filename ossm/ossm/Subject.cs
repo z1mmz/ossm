@@ -14,7 +14,7 @@ namespace ossm
         public string subjectDesc { get; set; }
         public string subjectName { get; set; }
         private SubjectClass[] classes { get; set; }
-        private Assignment[] assignments { get; set; }
+        private List<Assignment> assignments;
 
         public Subject(string subjectCode, string subjectDesc, string subjectName)//Default contruct
         {
@@ -22,23 +22,29 @@ namespace ossm
             this.subjectDesc = subjectDesc;
             this.subjectName = subjectName;
         }
-        public Subject(SerializationInfo info, StreamingContext ctxt)//serial constructor
-        {
-            subjectCode = info.GetString("SubjectCode");
-            classes = (SubjectClass[])info.GetValue("SubjectClass",classes.GetType());
-            assignments = (Assignment[])info.GetValue("Assignments", assignments.GetType());
-            //add serial construction here
-        }
-        //Serialization function
-        public void GetObjectData(SerializationInfo info, StreamingContext ctxt)
-        {
-            info.AddValue("SubjectCode", subjectCode);
-            info.AddValue("SubjectClass", classes);
-            info.AddValue("Assignments", assignments);
-        }
+        //No longer used due to update using appdriver saving array of objects
+        //public Subject(SerializationInfo info, StreamingContext ctxt)//serial constructor
+        //{
+        //    subjectCode = info.GetString("SubjectCode");
+        //    classes = (SubjectClass[])info.GetValue("SubjectClass",classes.GetType());
+        //    assignments = (Assignment[])info.GetValue("Assignments", assignments.GetType());
+        //    //add serial construction here
+        //}
+        ////Serialization function
+        //public void GetObjectData(SerializationInfo info, StreamingContext ctxt)
+        //{
+        //    info.AddValue("SubjectCode", subjectCode);
+        //    info.AddValue("SubjectClass", classes);
+        //    info.AddValue("Assignments", assignments);
+        //}
         public string getCode()
         {
             return subjectCode;
+        }
+        public List<Assignment> getAssignments()
+        {
+            List<Assignment> derp = assignments;
+            return derp;
         }
         
 
