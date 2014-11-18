@@ -9,14 +9,18 @@ namespace ossm
 {
     [Serializable()]
     public class Subject
-    {   
-        private string subjectCode {get;set;}
+    {
+        public string subjectCode { get; set; }
+        public string subjectDesc { get; set; }
+        public string subjectName { get; set; }
         private SubjectClass[] classes { get; set; }
         private Assignment[] assignments { get; set; }
 
-        public Subject(string subjectCode)//Default contruct
+        public Subject(string subjectCode, string subjectDesc, string subjectName)//Default contruct
         {
             this.subjectCode = subjectCode;
+            this.subjectDesc = subjectDesc;
+            this.subjectName = subjectName;
         }
         public Subject(SerializationInfo info, StreamingContext ctxt)//serial constructor
         {

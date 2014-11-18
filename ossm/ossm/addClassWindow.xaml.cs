@@ -40,7 +40,9 @@ namespace ossm
         private void AddSubjectClick(object sender, RoutedEventArgs e)
         {
             string code = subjectCodeText.Text;
-           _appDriver.addSubject(code);
+            string name = subjectNameBox.Text;
+            string desc = subjectDescBox.Text;
+           _appDriver.addSubject(code,desc,name);
             /* do rest of loading for class data here 
              * will implement methods in appDriver
              */

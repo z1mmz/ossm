@@ -34,9 +34,9 @@ namespace ossm
         {
 
         }
-        public void addSubject(string code){
+        public void addSubject(string subjectCode, string subjectDesc, string subjectName){
 
-        subjects.Add(new Subject(code));
+            subjects.Add(new Subject(subjectCode, subjectDesc, subjectName));
 
         }
         public List<Subject> getSubjects()

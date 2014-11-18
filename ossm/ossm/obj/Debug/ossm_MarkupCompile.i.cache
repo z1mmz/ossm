@@ -4,17 +4,17 @@
 winexe
 C#
 .cs
-C:\Users\wolf\Documents\GitHub\ossm\ossm\ossm\obj\Debug\
+C:\Users\wolf\Documents\Visual Studio 2013\Projects\ossm\ossm\ossm\obj\Debug\
 ossm
 none
 false
 DEBUG;TRACE
-C:\Users\wolf\Documents\GitHub\ossm\ossm\ossm\App.xaml
-2-1611642119
+C:\Users\wolf\Documents\Visual Studio 2013\Projects\ossm\ossm\ossm\App.xaml
+31050929551
 
-141190414044
+15-987026041
 12-1401562060
-addClassWindow.xaml;MainWindow.xaml;
-
+addClassWindow.xaml;MainWindow.xaml;SubjectDetails.xaml;
+splashscreen1.png
 False
 

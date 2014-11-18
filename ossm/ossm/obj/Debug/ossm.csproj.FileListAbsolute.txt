@@ -28,3 +28,5 @@ C:\Users\wolf\Documents\Visual Studio 2013\Projects\ossm\ossm\ossm\obj\Debug\add
 C:\Users\wolf\Documents\Visual Studio 2013\Projects\ossm\ossm\ossm\obj\Debug\addClassWindow.g.cs
 C:\Users\wolf\Documents\GitHub\ossm\ossm\ossm\obj\Debug\addClassWindow.baml
 C:\Users\wolf\Documents\GitHub\ossm\ossm\ossm\obj\Debug\addClassWindow.g.cs
+C:\Users\wolf\Documents\Visual Studio 2013\Projects\ossm\ossm\ossm\obj\Debug\SubjectDetails.baml
+C:\Users\wolf\Documents\Visual Studio 2013\Projects\ossm\ossm\ossm\obj\Debug\SubjectDetails.g.cs

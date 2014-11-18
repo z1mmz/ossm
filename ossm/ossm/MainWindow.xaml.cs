@@ -21,6 +21,7 @@ namespace ossm
     public partial class MainWindow : Window
     {
         private appDriver _appDriver;
+        List<Subject> subjects;
         
         List<string> data = new List<string>();
         public MainWindow()
@@ -40,7 +41,7 @@ namespace ossm
         public void fillComboBox()
         {
             
-            List<Subject> subjects = _appDriver.getSubjects();
+           subjects = _appDriver.getSubjects();
            subjects.ForEach(Subject => data.Add(Subject.getCode().ToString()));
             
             
@@ -75,6 +76,15 @@ namespace ossm
             string text = test.Text;
             TextBox box = testBox;
             box.Text = text;
+            for (int i = 0; i < subjects.Count; i++)
+            {
+                if (subjects[i].getCode() == text)
+                {
+                    Window subjectDetailWindow = new SubjectDetails(subjects[i]);
+                    subjectDetailWindow.Show();
+                }
+            }
+            
         }
         //protected override void OnClosed(EventArgs e)
         //{
