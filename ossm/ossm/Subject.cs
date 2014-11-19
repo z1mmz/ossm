@@ -38,7 +38,7 @@ namespace ossm
         public string subjectName { get; set; }
         private SubjectClass[] classes { get; set; }
         private List<Assignment> assignments;
-        private string filePath;
+        public string filePath;
 
         public Subject(string subjectCode, string subjectDesc, string subjectName)//constructor
         {

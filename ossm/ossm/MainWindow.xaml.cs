@@ -36,7 +36,9 @@ namespace ossm
     //       \::::/    /             \::::::/    /            \::::::/    /               /:::/    /      
     //        \::/____/               \::::/    /              \::::/    /               /:::/    /       
     //         ~~                      \::/    /                \::/    /                \::/    /        
-    //                                  \/____/                  \/____/                  \/____/                                             
+    //                                  \/____/                  \/____/                  \/____/           
+
+                               
 
     /// <summary>
     /// Interaction logic for MainWindow.xaml
@@ -113,10 +115,10 @@ namespace ossm
             
         }
         //onclose overide to make appDriver save
-       protected override void OnClosed(EventArgs e)
+        protected override void OnClosing(System.ComponentModel.CancelEventArgs e)
         {
             appDriver.saveToFile(_appDriver);
-            base.OnClosed(e);
+            base.OnClosing(e);
         }
 
        private void timeTableButton_Click(object sender, RoutedEventArgs e)

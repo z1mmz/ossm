@@ -53,6 +53,14 @@ namespace ossm
            this.Close();
             
         }
+        protected override void OnClosing(System.ComponentModel.CancelEventArgs e)
+        {
+           appDriver.saveToFile(_appDriver);
+           Window MainWindow = new MainWindow();
+           MainWindow.Show();
+
+           base.OnClosing(e);
+        }
 
 
     }

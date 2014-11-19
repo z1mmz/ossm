@@ -15,6 +15,7 @@ using System.Runtime.Serialization.Formatters.Binary;
  * THIS CLASS IS SERIALIZED TO SAVE DATA CLASSES in array
  * I know this is not ideal but hey it works
  * 
+ * CURRENT BUGS
  */
                     //         _______                   _____                    _____                    _____          
                     //        /::\    \                 /\    \                  /\    \                  /\    \         
