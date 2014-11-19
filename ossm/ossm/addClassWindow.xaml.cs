@@ -39,27 +39,41 @@ namespace ossm
 
         private void AddSubjectClick(object sender, RoutedEventArgs e)
         {
-            string code = subjectCodeText.Text;
-            string name = subjectNameBox.Text;
-            string desc = subjectDescBox.Text;
-           _appDriver.addSubject(code,desc,name);
+            if (!(subjectCodeText.Text == null))
+            {
+                string code = subjectCodeText.Text;
+                string name = subjectNameBox.Text;
+                string desc = subjectDescBox.Text;
+                _appDriver.addSubject(code, desc, name);
+            }
+            appDriver.saveToFile(_appDriver);
             /* do rest of loading for class data here 
              * will implement methods in appDriver
              */
             // save appDriver as it will be reloaded in mainwindow
-           appDriver.saveToFile(_appDriver);
-           Window MainWindow = new MainWindow();
-           MainWindow.Show();
-           this.Close();
+           //appDriver.saveToFile(_appDriver);
+           //Window MainWindow = new MainWindow();
+           //MainWindow.Show();
+           closeAndSave();
+           
             
         }
         protected override void OnClosing(System.ComponentModel.CancelEventArgs e)
         {
-           appDriver.saveToFile(_appDriver);
+           //appDriver.saveToFile(_appDriver);
+           //Window MainWindow = new MainWindow();
+           //MainWindow.Show();
+           //this.Close(
            Window MainWindow = new MainWindow();
-           MainWindow.Show();
+            MainWindow.Show();
 
-           base.OnClosing(e);
+            base.OnClosing(e);
+        }
+        public void closeAndSave()
+        {
+            
+            this.Close();
+           
         }
 
 

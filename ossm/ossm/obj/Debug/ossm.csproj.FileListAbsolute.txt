@@ -34,3 +34,9 @@ C:\Users\wolf\Documents\Visual Studio 2013\Projects\ossm\ossm\ossm\bin\Debug\oss
 C:\Users\wolf\Documents\Visual Studio 2013\Projects\ossm\ossm\ossm\bin\Debug\ossm.application
 C:\Users\wolf\Documents\Visual Studio 2013\Projects\ossm\ossm\ossm\obj\Debug\ossm.exe.manifest
 C:\Users\wolf\Documents\Visual Studio 2013\Projects\ossm\ossm\ossm\obj\Debug\ossm.application
+C:\Users\wolf\Documents\Visual Studio 2013\Projects\ossm\ossm\ossm\bin\Debug\FirstFloor.ModernUI.dll
+C:\Users\wolf\Documents\Visual Studio 2013\Projects\ossm\ossm\ossm\bin\Debug\NCodeFactory.Toolkit.Common.dll
+C:\Users\wolf\Documents\Visual Studio 2013\Projects\ossm\ossm\ossm\bin\Debug\NCodeFactory.Toolkit.Mvvm.Wpf.Mui.dll
+C:\Users\wolf\Documents\Visual Studio 2013\Projects\ossm\ossm\ossm\bin\Debug\FirstFloor.ModernUI.xml
+C:\Users\wolf\Documents\Visual Studio 2013\Projects\ossm\ossm\ossm\obj\Debug\Window1.baml
+C:\Users\wolf\Documents\Visual Studio 2013\Projects\ossm\ossm\ossm\obj\Debug\Window1.g.cs

@@ -43,14 +43,50 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="ossm.exe" size="77312">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="FirstFloor.ModernUI.dll" size="203776">
+      <assemblyIdentity name="FirstFloor.ModernUI" version="1.0.5.0" publicKeyToken="2D21EC3CD074C59A" language="neutral" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+        <dsig:DigestValue>yp8MMI6wgcTx7dXTyE2yb/279iL0JvJ6+pJV0nKkpew=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="NCodeFactory.Toolkit.Common.dll" size="30720">
+      <assemblyIdentity name="NCodeFactory.Toolkit.Common" version="1.0.0.21" language="neutral" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+        <dsig:DigestValue>qCgAXOSe3b6D2tyBeI5bq3yS8wImuqwMr3HzV2+pBzY=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="NCodeFactory.Toolkit.Mvvm.Wpf.Mui.dll" size="13312">
+      <assemblyIdentity name="NCodeFactory.Toolkit.Mvvm.Wpf.Mui" version="1.0.0.21" language="neutral" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+        <dsig:DigestValue>/9zF3rhBXEdZOg6k+BqFZJGIjgPUtzYJdNS8l2xXDms=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="ossm.exe" size="78848">
       <assemblyIdentity name="ossm" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>O+F87z17Iwso5Kj3/8zXbRAzMUbknlCM3pvY5AgVG/w=</dsig:DigestValue>
+        <dsig:DigestValue>d7+JO89jPcXEhtn2BU4RplW5UedmKtJTEy2jXpq6MEc=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
