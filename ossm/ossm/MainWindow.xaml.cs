@@ -62,11 +62,6 @@ namespace ossm
         
         }
 
-        //private void Button_Click(object sender, RoutedEventArgs e)
-        //{
-
-        //}
-
         //Populate the combo box
         public void fillComboBox()
         {
@@ -76,15 +71,11 @@ namespace ossm
            data.Sort();
            ClassComboBox.ItemsSource = data;
            ClassComboBox.Items.Refresh();
-           
+           SubjectListDeleteBox.ItemsSource = data;
+           SubjectListDeleteBox.Items.Refresh();
+          
            
         }
-        //TEST FUNCTION
-        //public void fillComboBox(string a)
-        //{
-        //     data.Add(a);
-        //    ClassComboBox.ItemsSource = data;
-        //}
 
         //Add subject button 
         private void addClass(object sender, RoutedEventArgs e)
@@ -103,17 +94,19 @@ namespace ossm
         private void ClassComboBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
             ComboBox test = ClassComboBox;
-            string text = test.SelectedItem.ToString();
-
-            for (int i = 0; i < subjects.Count; i++)
+            if (!(test.SelectedItem.ToString() == null))
             {
-                if (subjects[i].getCode() == text)
+                string text = test.SelectedItem.ToString();
+
+                for (int i = 0; i < subjects.Count; i++)
                 {
-                    Window subjectDetailWindow = new SubjectDetails(subjects[i], _appDriver);
-                    subjectDetailWindow.Show();
+                    if (subjects[i].getCode() == text)
+                    {
+                        Window subjectDetailWindow = new SubjectDetails(subjects[i], _appDriver);
+                        subjectDetailWindow.Show();
+                    }
                 }
             }
-            
             
         }
         
@@ -183,6 +176,27 @@ namespace ossm
        private void MinimiseButton(object sender, System.Windows.RoutedEventArgs e)
        {
            this.WindowState = WindowState.Minimized;
+       }
+
+       private void ClassComboBoxContext(object sender, ContextMenuEventArgs e)
+       {
+           
+       }
+
+          private void SubjectListDeleteBoxClick(object sender, MouseButtonEventArgs e)
+       {
+           
+           string text = SubjectListDeleteBox.SelectedItem.ToString();
+
+           for (int i = 0; i < subjects.Count; i++)
+           {
+               if (subjects[i].getCode() == text)
+               {
+                   _appDriver.subjects.Remove(subjects[i]);
+               }
+           }
+           fillComboBox();
+
        }
        //protected override void OnClosing(System.ComponentModel.CancelEventArgs e)
        //{

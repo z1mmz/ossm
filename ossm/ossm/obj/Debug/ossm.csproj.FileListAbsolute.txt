@@ -11,34 +11,40 @@ C:\Users\wolf\Documents\GitHub\ossm\ossm\ossm\obj\Debug\ossm.Properties.Resource
 C:\Users\wolf\Documents\GitHub\ossm\ossm\ossm\obj\Debug\ossm.csproj.GenerateResource.Cache
 C:\Users\wolf\Documents\GitHub\ossm\ossm\ossm\obj\Debug\ossm.exe
 C:\Users\wolf\Documents\GitHub\ossm\ossm\ossm\obj\Debug\ossm.pdb
+C:\Users\wolf\Documents\GitHub\ossm\ossm\ossm\obj\Debug\addClassWindow.baml
+C:\Users\wolf\Documents\GitHub\ossm\ossm\ossm\obj\Debug\addClassWindow.g.cs
 C:\Users\wolf\Documents\Visual Studio 2013\Projects\ossm\ossm\ossm\bin\Debug\ossm.exe.config
-C:\Users\wolf\Documents\Visual Studio 2013\Projects\ossm\ossm\ossm\obj\Debug\ossm.exe
-C:\Users\wolf\Documents\Visual Studio 2013\Projects\ossm\ossm\ossm\obj\Debug\ossm.pdb
+C:\Users\wolf\Documents\Visual Studio 2013\Projects\ossm\ossm\ossm\bin\Debug\ossm.exe.manifest
+C:\Users\wolf\Documents\Visual Studio 2013\Projects\ossm\ossm\ossm\bin\Debug\ossm.application
 C:\Users\wolf\Documents\Visual Studio 2013\Projects\ossm\ossm\ossm\bin\Debug\ossm.exe
 C:\Users\wolf\Documents\Visual Studio 2013\Projects\ossm\ossm\ossm\bin\Debug\ossm.pdb
-C:\Users\wolf\Documents\Visual Studio 2013\Projects\ossm\ossm\ossm\obj\Debug\ossm.csprojResolveAssemblyReference.cache
+C:\Users\wolf\Documents\Visual Studio 2013\Projects\ossm\ossm\ossm\bin\Debug\Microsoft.Expression.Drawing.dll
+C:\Users\wolf\Documents\Visual Studio 2013\Projects\ossm\ossm\ossm\bin\Debug\de\Microsoft.Expression.Drawing.resources.dll
+C:\Users\wolf\Documents\Visual Studio 2013\Projects\ossm\ossm\ossm\bin\Debug\es\Microsoft.Expression.Drawing.resources.dll
+C:\Users\wolf\Documents\Visual Studio 2013\Projects\ossm\ossm\ossm\bin\Debug\fr\Microsoft.Expression.Drawing.resources.dll
+C:\Users\wolf\Documents\Visual Studio 2013\Projects\ossm\ossm\ossm\bin\Debug\it\Microsoft.Expression.Drawing.resources.dll
+C:\Users\wolf\Documents\Visual Studio 2013\Projects\ossm\ossm\ossm\bin\Debug\ja\Microsoft.Expression.Drawing.resources.dll
+C:\Users\wolf\Documents\Visual Studio 2013\Projects\ossm\ossm\ossm\bin\Debug\ko\Microsoft.Expression.Drawing.resources.dll
+C:\Users\wolf\Documents\Visual Studio 2013\Projects\ossm\ossm\ossm\bin\Debug\ru\Microsoft.Expression.Drawing.resources.dll
+C:\Users\wolf\Documents\Visual Studio 2013\Projects\ossm\ossm\ossm\bin\Debug\zh-Hans\Microsoft.Expression.Drawing.resources.dll
+C:\Users\wolf\Documents\Visual Studio 2013\Projects\ossm\ossm\ossm\bin\Debug\zh-Hant\Microsoft.Expression.Drawing.resources.dll
+C:\Users\wolf\Documents\Visual Studio 2013\Projects\ossm\ossm\ossm\obj\Debug\addClassWindow.baml
 C:\Users\wolf\Documents\Visual Studio 2013\Projects\ossm\ossm\ossm\obj\Debug\MainWindow.baml
+C:\Users\wolf\Documents\Visual Studio 2013\Projects\ossm\ossm\ossm\obj\Debug\SubjectDetails.baml
+C:\Users\wolf\Documents\Visual Studio 2013\Projects\ossm\ossm\ossm\obj\Debug\Window1.baml
+C:\Users\wolf\Documents\Visual Studio 2013\Projects\ossm\ossm\ossm\obj\Debug\Window2.baml
+C:\Users\wolf\Documents\Visual Studio 2013\Projects\ossm\ossm\ossm\obj\Debug\addClassWindow.g.cs
 C:\Users\wolf\Documents\Visual Studio 2013\Projects\ossm\ossm\ossm\obj\Debug\MainWindow.g.cs
+C:\Users\wolf\Documents\Visual Studio 2013\Projects\ossm\ossm\ossm\obj\Debug\SubjectDetails.g.cs
+C:\Users\wolf\Documents\Visual Studio 2013\Projects\ossm\ossm\ossm\obj\Debug\Window1.g.cs
+C:\Users\wolf\Documents\Visual Studio 2013\Projects\ossm\ossm\ossm\obj\Debug\Window2.g.cs
 C:\Users\wolf\Documents\Visual Studio 2013\Projects\ossm\ossm\ossm\obj\Debug\App.g.cs
 C:\Users\wolf\Documents\Visual Studio 2013\Projects\ossm\ossm\ossm\obj\Debug\ossm_MarkupCompile.cache
 C:\Users\wolf\Documents\Visual Studio 2013\Projects\ossm\ossm\ossm\obj\Debug\ossm.g.resources
 C:\Users\wolf\Documents\Visual Studio 2013\Projects\ossm\ossm\ossm\obj\Debug\ossm.Properties.Resources.resources
 C:\Users\wolf\Documents\Visual Studio 2013\Projects\ossm\ossm\ossm\obj\Debug\ossm.csproj.GenerateResource.Cache
-C:\Users\wolf\Documents\Visual Studio 2013\Projects\ossm\ossm\ossm\obj\Debug\addClassWindow.baml
-C:\Users\wolf\Documents\Visual Studio 2013\Projects\ossm\ossm\ossm\obj\Debug\addClassWindow.g.cs
-C:\Users\wolf\Documents\GitHub\ossm\ossm\ossm\obj\Debug\addClassWindow.baml
-C:\Users\wolf\Documents\GitHub\ossm\ossm\ossm\obj\Debug\addClassWindow.g.cs
-C:\Users\wolf\Documents\Visual Studio 2013\Projects\ossm\ossm\ossm\obj\Debug\SubjectDetails.baml
-C:\Users\wolf\Documents\Visual Studio 2013\Projects\ossm\ossm\ossm\obj\Debug\SubjectDetails.g.cs
-C:\Users\wolf\Documents\Visual Studio 2013\Projects\ossm\ossm\ossm\bin\Debug\ossm.exe.manifest
-C:\Users\wolf\Documents\Visual Studio 2013\Projects\ossm\ossm\ossm\bin\Debug\ossm.application
 C:\Users\wolf\Documents\Visual Studio 2013\Projects\ossm\ossm\ossm\obj\Debug\ossm.exe.manifest
 C:\Users\wolf\Documents\Visual Studio 2013\Projects\ossm\ossm\ossm\obj\Debug\ossm.application
-C:\Users\wolf\Documents\Visual Studio 2013\Projects\ossm\ossm\ossm\bin\Debug\FirstFloor.ModernUI.dll
-C:\Users\wolf\Documents\Visual Studio 2013\Projects\ossm\ossm\ossm\bin\Debug\NCodeFactory.Toolkit.Common.dll
-C:\Users\wolf\Documents\Visual Studio 2013\Projects\ossm\ossm\ossm\bin\Debug\NCodeFactory.Toolkit.Mvvm.Wpf.Mui.dll
-C:\Users\wolf\Documents\Visual Studio 2013\Projects\ossm\ossm\ossm\bin\Debug\FirstFloor.ModernUI.xml
-C:\Users\wolf\Documents\Visual Studio 2013\Projects\ossm\ossm\ossm\obj\Debug\Window1.baml
-C:\Users\wolf\Documents\Visual Studio 2013\Projects\ossm\ossm\ossm\obj\Debug\Window1.g.cs
-C:\Users\wolf\Documents\Visual Studio 2013\Projects\ossm\ossm\ossm\obj\Debug\Window2.baml
-C:\Users\wolf\Documents\Visual Studio 2013\Projects\ossm\ossm\ossm\obj\Debug\Window2.g.cs
+C:\Users\wolf\Documents\Visual Studio 2013\Projects\ossm\ossm\ossm\obj\Debug\ossm.exe
+C:\Users\wolf\Documents\Visual Studio 2013\Projects\ossm\ossm\ossm\obj\Debug\ossm.pdb
+C:\Users\wolf\Documents\Visual Studio 2013\Projects\ossm\ossm\ossm\obj\Debug\ossm.csprojResolveAssemblyReference.cache
