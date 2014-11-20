@@ -52,7 +52,7 @@ namespace ossm
     public class appDriver : ISerializable
     {
         //public static appDriver() { }
-        public static readonly string _FILE_PATH = System.Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments)+"\\" +"OSSM"+"\\"+"Save.DAT";
+        public static readonly string _FILE_PATH = System.Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments)+"\\" +"OSSM"+"\\"+"Save.OSSM";
 
    
         public List<Subject> subjects = new List<Subject>();

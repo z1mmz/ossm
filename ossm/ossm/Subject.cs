@@ -5,6 +5,8 @@ using System.Linq;
 using System.Runtime.Serialization;
 using System.Text;
 using System.Threading.Tasks;
+using System.Text.RegularExpressions;
+using System.Windows;
 //         _______                   _____                    _____                    _____          
 //        /::\    \                 /\    \                  /\    \                  /\    \         
 //       /::::\    \               /::\    \                /::\    \                /::\____\        
@@ -48,7 +50,8 @@ namespace ossm
             this.filePath = System.Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments)+"\\" +"OSSM"+"\\" + subjectCode ;
             if (!Directory.Exists(filePath))
             {
-                Directory.CreateDirectory(this.filePath);
+                    Directory.CreateDirectory(this.filePath);
+                
             }
         }
 

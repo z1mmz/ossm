@@ -40,3 +40,5 @@ C:\Users\wolf\Documents\Visual Studio 2013\Projects\ossm\ossm\ossm\bin\Debug\NCo
 C:\Users\wolf\Documents\Visual Studio 2013\Projects\ossm\ossm\ossm\bin\Debug\FirstFloor.ModernUI.xml
 C:\Users\wolf\Documents\Visual Studio 2013\Projects\ossm\ossm\ossm\obj\Debug\Window1.baml
 C:\Users\wolf\Documents\Visual Studio 2013\Projects\ossm\ossm\ossm\obj\Debug\Window1.g.cs
+C:\Users\wolf\Documents\Visual Studio 2013\Projects\ossm\ossm\ossm\obj\Debug\Window2.baml
+C:\Users\wolf\Documents\Visual Studio 2013\Projects\ossm\ossm\ossm\obj\Debug\Window2.g.cs

@@ -56,6 +56,9 @@ namespace ossm
             InitializeComponent();
             _appDriver = appDriver.loadFromFile();
             fillComboBox();
+            //Window test = new Window2();
+            //test.Show();
+            DataContext = this.DataContext;
         
         }
 
@@ -67,12 +70,14 @@ namespace ossm
         //Populate the combo box
         public void fillComboBox()
         {
-            
+            data.Clear();
            subjects = _appDriver.getSubjects();
            subjects.ForEach(Subject => data.Add(Subject.getCode().ToString()));
            data.Sort();
-            
-            ClassComboBox.ItemsSource = data; 
+           ClassComboBox.ItemsSource = data;
+           ClassComboBox.Items.Refresh();
+           
+           
         }
         //TEST FUNCTION
         //public void fillComboBox(string a)
@@ -125,5 +130,46 @@ namespace ossm
        {
 
        }
+       private void TextBox_TextChanged(object sender, TextChangedEventArgs e)
+       {
+
+       }
+
+       private void AddSubjectClick(object sender, RoutedEventArgs e)
+       {
+           if (!(subjectCodeText.Text == null))
+           {
+               string code = subjectCodeText.Text;
+               string name = subjectNameBox.Text;
+               string desc = subjectDescBox.Text;
+               _appDriver.addSubject(code, desc, name);
+           }
+           
+           appDriver.saveToFile(_appDriver);
+           fillComboBox();
+           HomeTab.IsSelected = true;
+           
+           /* do rest of loading for class data here 
+            * will implement methods in appDriver
+            */
+           // save appDriver as it will be reloaded in mainwindow
+           //appDriver.saveToFile(_appDriver);
+           //Window MainWindow = new MainWindow();
+           //MainWindow.Show();
+           //closeAndSave();
+
+
+       }
+       //protected override void OnClosing(System.ComponentModel.CancelEventArgs e)
+       //{
+       //    //appDriver.saveToFile(_appDriver);
+       //    //Window MainWindow = new MainWindow();
+       //    //MainWindow.Show();
+       //    //this.Close(
+       //    Window MainWindow = new MainWindow();
+       //    MainWindow.Show();
+
+       //    base.OnClosing(e);
+       //}
     }
 }

@@ -1,17 +1,66 @@
-﻿<Window x:Class="ossm.MainWindow"
-        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
-        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        Title="Open Source Study Manager" Height="500" Width="700"
-        Background="Snow">
-    <Grid Background="White">
-        <Label Content="Welcome to OSSM" HorizontalContentAlignment="Center" HorizontalAlignment="Stretch" VerticalAlignment="Top" Height="67" Background="ForestGreen" Foreground="White" FontSize="20" />
+﻿<Window
+	xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+	xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+	x:Class="ossm.MainWindow"
+	x:Name="Window"
+    ResizeMode="CanMinimize"
+	Title="Open Source Study Manager Project ALPHA 0.01"
+	Width="640" Height="480" >
+
+    <Grid x:Name="LayoutRoot">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="55*"/>
+            <ColumnDefinition Width="169*"/>
+            <ColumnDefinition Width="93*"/>
+        </Grid.ColumnDefinitions>
+        <Grid Width="632" HorizontalAlignment="Left" Height="449" VerticalAlignment="Top" Grid.ColumnSpan="3">
+            <Grid HorizontalAlignment="Left" Height="449" VerticalAlignment="Top" Width="632" Background="White">
+
+                <TabControl BorderBrush="White" x:Name="TabControl" TabStripPlacement="Left" Height="402" VerticalAlignment="Top" Width="632" Margin="0,47,0,0">
+                    <TabItem x:Name="HomeTab" BorderThickness="0" Header="Home" Background="{x:Null}" Width="100" FontSize="16" FontFamily="/ossm;component/Fonts/#Tahoma" BorderBrush="{x:Null}" Height="27" Margin="-1,-2,1,-2" VerticalAlignment="Top">
+                        <Grid  Background="White" Margin="0,0,25,29">
+                            <Grid.RowDefinitions>
+
+                                <RowDefinition/>
+
+                            </Grid.RowDefinitions>
 
 
-        <Button x:Name="timeTableButton" Content="View Time table" HorizontalAlignment="Left" Margin="71,113,0,0" VerticalAlignment="Top" Width="103" Height="27" Click="timeTableButton_Click"/>
-        <ComboBox x:Name="ClassComboBox" HorizontalAlignment="Left" Height="27" Margin="71,218,0,0" VerticalAlignment="Top" Width="390" RenderTransformOrigin="-1.108,0.913" SelectionChanged="ClassComboBox_SelectionChanged"/>
-        <Label Content="Select Class" HorizontalAlignment="Left" Margin="71,187,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.509,-0.293"/>
-        <Button x:Name="viewNotesButton" Content="View Details" HorizontalAlignment="Left" Margin="497,218,0,0" VerticalAlignment="Top" Width="103" Height="27" Click="viewNotesClick"/>
-        <Button x:Name="addClassButton" Content="Add Subject" HorizontalAlignment="Left" Margin="195,113,0,0" VerticalAlignment="Top" Width="103" Height="27" Click="addClass"/>
+                            <Button x:Name="timeTableButton" Content="View Time table" HorizontalAlignment="Left" Margin="10,30,0,0" VerticalAlignment="Top" Width="127" Height="32" Click="timeTableButton_Click" FontSize="14.667" Background="ForestGreen" Foreground="White"/>
+                            <ComboBox x:Name="ClassComboBox" HorizontalAlignment="Left" Height="32" Margin="10,128,0,0" VerticalAlignment="Top" Width="288" RenderTransformOrigin="-1.108,0.913" SelectionChanged="ClassComboBox_SelectionChanged"/>
+                            <Label Content="Select Class" HorizontalAlignment="Left" Margin="10,94,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.509,-0.293"/>
+                            <Button x:Name="viewNotesButton" Content="View Details" HorizontalAlignment="Left" Margin="356,128,0,0" VerticalAlignment="Top" Width="103" Height="32" Click="viewNotesClick" FontSize="14.667" RenderTransformOrigin="0.583,0.906" BorderBrush="#FF707070" Background="ForestGreen" Foreground="White"/>
+                            <Button x:Name="addClassButton" Content="Add Subject" HorizontalAlignment="Left" Margin="170,30,0,0" VerticalAlignment="Top" Width="128" Height="32" Click="addClass" FontSize="14.667" Background="ForestGreen" Foreground="White" BorderBrush="#FFB0B0B0"/>
+                        </Grid>
+                    </TabItem>
+                    <TabItem x:Name="TimeTableTab" Header="Time table" BorderBrush="{x:Null}" Background="{x:Null}" FontSize="16" FontFamily="/ossm;component/Fonts/#Tahoma" Width="100"/>
+                    <TabItem x:Name="SettingsTab" Header="Settings" BorderBrush="{x:Null}" Background="{x:Null}" FontSize="16" FontFamily="/ossm;component/Fonts/#Tahoma" Width="100" Margin="0,29,0,-33">
+                        <Grid Background="White" Margin="0,0,-3,0">
+                            <TextBlock HorizontalAlignment="Left" Height="217" Margin="29,10,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="447"><Run Text="OSSM Open Source Study Manger Apha 0.01"/><LineBreak/><Run Text="Code By Wolf Zimmermann"/><LineBreak/><Run Text="Design reference by ******** - Does he want to be Named?"/><LineBreak/><Run Text=""/><LineBreak/><Run Text="This project is in its very early stages so expect data loss and do not trust it fully yet be safe make backups"/><LineBreak/><Run Text="Contact Wolf about any bugs"/><LineBreak/><Run/><LineBreak/><Run Text="Settings will be implements soon dont worry ill let you change the colours soon"/></TextBlock>
+                        </Grid>
+                    </TabItem>
+                    <TabItem x:Name="AddClassTab" Header="Add Subject" BorderBrush="{x:Null}" Background="{x:Null}" FontSize="16" FontFamily="/ossm;component/Fonts/#Tahoma" Width="100" Margin="0,-21,0,17" IsHitTestVisible="True">
 
+                        <Grid Background="White" Margin="10,0,-13,0">
+                            <Label Content="Subject Code" HorizontalAlignment="Left" Margin="10,28,0,0" VerticalAlignment="Top" Height="26" Width="104"/>
+                            <Label Content="Subject name" HorizontalAlignment="Left" Margin="10,59,0,0" VerticalAlignment="Top" Height="26" Width="117"/>
+                            <Label Content="Description&#xD;&#xA;" HorizontalAlignment="Left" Margin="10,90,0,0" VerticalAlignment="Top" Height="42" Width="104"/>
+                            <TextBox x:Name="subjectCodeText" HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" VerticalAlignment="Top" Width="333" Margin="151,28,0,0" TextChanged="TextBox_TextChanged"/>
+                            <TextBox x:Name="subjectNameBox" HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" VerticalAlignment="Top" Width="333" Margin="151,62,0,0" TextChanged="TextBox_TextChanged"/>
+                            <TextBox x:Name="subjectDescBox" HorizontalAlignment="Left" Height="282" Margin="151,104,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="333"/>
+                            <Button x:Name="AddSubject" Content="Add Subject" HorizontalAlignment="Left" Margin="15,197,0,0" VerticalAlignment="Top" Width="112" Height="30" Click="AddSubjectClick"/>
+                        </Grid>
+
+                    </TabItem>
+
+
+                </TabControl>
+                <Label Content="Welcome to OSSM" HorizontalContentAlignment="Center" HorizontalAlignment="Stretch" Width="auto" VerticalAlignment="Bottom" Height="42" Foreground="White" FontSize="26.667" Margin="0,0,0,407" >
+                    <Label.Background>
+                        <SolidColorBrush Color="ForestGreen"/>
+                    </Label.Background>
+                </Label>
+            </Grid>
+        </Grid>
     </Grid>
 </Window>

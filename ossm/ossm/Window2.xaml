@@ -1,0 +1,48 @@
+﻿<Window
+	xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+	xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+	x:Class="ossm.Window2"
+	x:Name="Window"
+	Title="Window2"
+	Width="640" Height="480">
+
+    <Grid x:Name="LayoutRoot">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="163*"/>
+            <ColumnDefinition Width="153*"/>
+        </Grid.ColumnDefinitions>
+        <Grid HorizontalAlignment="Left" Height="449" VerticalAlignment="Top" Width="632" Grid.ColumnSpan="2">
+            <Grid HorizontalAlignment="Left" Height="449" VerticalAlignment="Top" Width="632" Background="White">
+                <Label Content="Welcome to OSSM" HorizontalContentAlignment="Center" HorizontalAlignment="Stretch" VerticalAlignment="Bottom" Height="42" Background="ForestGreen" Foreground="White" FontSize="26.667" Margin="0,0,0,407" />
+
+                <TabControl BorderBrush="White" x:Name="HomeTab" TabStripPlacement="Left" Height="402" VerticalAlignment="Top" Width="632" Margin="0,47,0,0">
+                    <TabItem BorderThickness="0" Header="Home" Background="{x:Null}" Width="100" FontSize="16" FontFamily="/ossm;component/Fonts/#Tahoma" BorderBrush="{x:Null}">
+                        <Grid Background="White" Margin="0,2,-3,-2">
+                            <Grid.RowDefinitions>
+
+                                <RowDefinition/>
+
+                            </Grid.RowDefinitions>
+
+
+                            <Button x:Name="timeTableButton" Content="View Time table" HorizontalAlignment="Left" Margin="10,113,0,0" VerticalAlignment="Top" Width="127" Height="27" Click="timeTableButton_Click" FontSize="14.667"/>
+                            <ComboBox x:Name="ClassComboBox" HorizontalAlignment="Left" Height="27" Margin="10,216,0,0" VerticalAlignment="Top" Width="390" RenderTransformOrigin="-1.108,0.913" SelectionChanged="ClassComboBox_SelectionChanged"/>
+                            <Label Content="Select Class" HorizontalAlignment="Left" Margin="10,181.686,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.509,-0.293"/>
+                            <Button x:Name="viewNotesButton" Content="View Details" HorizontalAlignment="Left" Margin="414,216,0,0" VerticalAlignment="Top" Width="103" Height="27" Click="viewNotesClick" FontSize="14.667"/>
+                            <Button x:Name="addClassButton" Content="Add Subject" HorizontalAlignment="Left" Margin="142,113,0,0" VerticalAlignment="Top" Width="128" Height="27" Click="addClass" FontSize="14.667"/>
+                        </Grid>
+                    </TabItem>
+                    <TabItem Header="Time table" BorderBrush="{x:Null}" Background="{x:Null}" FontSize="16" FontFamily="/ossm;component/Fonts/#Tahoma" Width="100">
+                        <Grid Background="White" Margin="0,0,-3,0"/>
+                    </TabItem>
+                    <TabItem Header="Settings" BorderBrush="{x:Null}" Background="{x:Null}" FontSize="16" FontFamily="/ossm;component/Fonts/#Tahoma" Width="100" Margin="-1,-2,1,-2">
+                        <Grid Background="White" Margin="0,0,-3,0"/>
+                    </TabItem>
+                    <TabItem x:Name="AddClassTab" Header="AddClass" BorderBrush="{x:Null}" Background="{x:Null}" FontSize="16" FontFamily="/ossm;component/Fonts/#Tahoma" Width="100" Margin="-1,-2,1,-2" IsHitTestVisible="True" Visibility="Hidden">
+                    	<Grid Background="White" Margin="0,0,-3,0"/>
+                    </TabItem>
+                </TabControl>
+            </Grid>
+        </Grid>
+    </Grid>
+</Window>
