@@ -79,14 +79,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="ossm.exe" size="1542144">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="ossm.exe" size="1543168">
       <assemblyIdentity name="ossm" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>BiZDRJmh/ZR+X0nxZSR1b33VyFq3Eior0VhYGLYScEg=</dsig:DigestValue>
+        <dsig:DigestValue>ciCEZ6OwJNQlhhsDPUqcYQ2MFzdBr6iUphFw/T8t2ro=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>

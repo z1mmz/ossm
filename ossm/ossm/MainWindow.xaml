@@ -3,25 +3,38 @@
 	xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
 	x:Class="ossm.MainWindow"
 	x:Name="Window"
+    
+	WindowStyle="None"
     ResizeMode="CanMinimize"
 	Title="Open Source Study Manager Project ALPHA 0.01"
-	Width="640" Height="480" >
+	Width="640" Height="480" MouseLeftButtonDown="WindowMouseLeftButtonDown" >
 
-    <Grid x:Name="LayoutRoot">
+
+    <Grid x:Name="LayoutRoot" Margin="0,0,10,0">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="47*"/>
+            <RowDefinition Height="404*"/>
+        </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="55*"/>
-            <ColumnDefinition Width="169*"/>
+            <ColumnDefinition Width="61*"/>
+            <ColumnDefinition Width="163*"/>
             <ColumnDefinition Width="93*"/>
         </Grid.ColumnDefinitions>
-        <Grid Width="632" HorizontalAlignment="Left" Height="449" VerticalAlignment="Top" Grid.ColumnSpan="3">
+        <Grid Width="632" HorizontalAlignment="Left" Height="449" VerticalAlignment="Top" Grid.ColumnSpan="3" Grid.RowSpan="2">
             <Grid HorizontalAlignment="Left" Height="449" VerticalAlignment="Top" Width="632" Background="White">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="107*"/>
+                    <ColumnDefinition Width="490*"/>
+                    <ColumnDefinition Width="35*"/>
+                    <ColumnDefinition Width="0*"/>
+                </Grid.ColumnDefinitions>
 
-                <TabControl BorderBrush="White" x:Name="TabControl" TabStripPlacement="Left" Height="402" VerticalAlignment="Top" Width="632" Margin="0,47,0,0">
+                <TabControl BorderBrush="White" x:Name="TabControl" TabStripPlacement="Left" Height="373" VerticalAlignment="Top" Margin="0,76,10,0" Grid.ColumnSpan="3">
                     <TabControl.Background>
                         <ImageBrush/>
                     </TabControl.Background>
-                    <TabItem x:Name="HomeTab" BorderThickness="0" Header="Home" Background="{x:Null}" FontSize="16" FontFamily="/ossm;component/Fonts/#Tahoma" BorderBrush="{x:Null}" Height="27" Margin="-1,-2,4,0" VerticalAlignment="Top">
-                        <Grid Margin="0,0,25,29" Background="White">
+                    <TabItem x:Name="HomeTab" BorderThickness="0" Header="Home" Background="{x:Null}" FontSize="16" FontFamily="/ossm;component/Fonts/#Tahoma" BorderBrush="{x:Null}" Height="27" Margin="-1,-3,-20,0" VerticalAlignment="Top">
+                        <Grid Margin="15,2,21,27" Background="White">
                             <Grid.ColumnDefinitions>
                                 <ColumnDefinition Width="310*"/>
                                 <ColumnDefinition Width="189*"/>
@@ -31,10 +44,7 @@
                                 <RowDefinition/>
 
                             </Grid.RowDefinitions>
-
-
-                            <Button x:Name="timeTableButton" Content="Timetable" HorizontalAlignment="Left" Margin="10,0,0,0" VerticalAlignment="Top" Width="131" Height="131" Click="timeTableButton_Click" FontSize="18" Foreground="White" Background="ForestGreen" BorderBrush="{x:Null}" FontWeight="Bold"/>
-                            <ComboBox x:Name="ClassComboBox" SelectedItem="Select Subject" HorizontalAlignment="Left" Height="28" Margin="10,168,0,0" VerticalAlignment="Top" Width="368" RenderTransformOrigin="-1.108,0.913" SelectionChanged="ClassComboBox_SelectionChanged" Grid.ColumnSpan="2" Background="ForestGreen">
+                            <ComboBox x:Name="ClassComboBox" SelectedItem="Select Subject" HorizontalAlignment="Left" Height="28" Margin="10,44,0,0" VerticalAlignment="Top" Width="368" RenderTransformOrigin="-1.108,0.913" SelectionChanged="ClassComboBox_SelectionChanged" Grid.ColumnSpan="2" Background="White">
                                 <ComboBox.BorderBrush>
                                     <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
                                         <GradientStop Color="Black" Offset="0"/>
@@ -42,17 +52,16 @@
                                     </LinearGradientBrush>
                                 </ComboBox.BorderBrush>
                             </ComboBox>
-                            <Label Content="Select Subject" HorizontalAlignment="Left" Margin="10,139,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.509,-0.293"/>
-                            <Button x:Name="addClassButton" Content="Add Subject" HorizontalAlignment="Left" Margin="146,0,0,0" VerticalAlignment="Top" Width="131" Height="131" Click="addClass" FontSize="18" Background="ForestGreen" Foreground="White" BorderBrush="{x:Null}" FontWeight="Bold"/>
+                            <Label Content="Select Subject" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.509,-0.293"/>
                         </Grid>
                     </TabItem>
-                    <TabItem x:Name="TimeTableTab" Header="Time table" BorderBrush="{x:Null}" Background="{x:Null}" FontSize="16" FontFamily="/ossm;component/Fonts/#Tahoma" Margin="-1,-2,7,-2"/>
-                    <TabItem x:Name="SettingsTab" Header="Settings" BorderBrush="{x:Null}" Background="{x:Null}" FontSize="16" FontFamily="/ossm;component/Fonts/#Tahoma" Margin="0,29,4,-33">
+                    <TabItem x:Name="TimeTableTab" Header="Time table" BorderBrush="{x:Null}" Background="{x:Null}" FontSize="16" FontFamily="/ossm;component/Fonts/#Tahoma" Margin="-1,-2,-20,-2"/>
+                    <TabItem x:Name="SettingsTab" Header="Settings" BorderBrush="{x:Null}" Background="{x:Null}" FontSize="16" FontFamily="/ossm;component/Fonts/#Tahoma" Margin="0,25,-16,-25" Height="27" VerticalAlignment="Top">
                         <Grid Background="White" Margin="0,0,-3,0">
-                            <TextBlock HorizontalAlignment="Left" Height="217" Margin="29,10,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="447"><Run Text="OSSM Open Source Study Manger Apha 0.01"/><LineBreak/><Run Text="Code By Wolf Zimmermann"/><LineBreak/><Run Text="Design reference by ******** - Does he want to be Named?"/><LineBreak/><Run Text=""/><LineBreak/><Run Text="This project is in its very early stages so expect data loss and do not trust it fully yet be safe make backups"/><LineBreak/><Run Text="Contact Wolf about any bugs"/><LineBreak/><Run/><LineBreak/><Run Text="Settings will be implements soon dont worry ill let you change the colours soon"/></TextBlock>
+                            <TextBlock HorizontalAlignment="Left" Height="217" Margin="29,10,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="447"><Run Text="OSSM Open Source Study Manger Apha 0.01"/><LineBreak/><Run Text="Code By Wolf Zimmermann"/><LineBreak/><Run Text="Design reference by "/><Run Text="Arapaoa Moffat"/><LineBreak/><Run Text=""/><LineBreak/><Run Text="This project is in its very early stages so expect data loss and do not trust it fully yet be safe make backups"/><LineBreak/><Run Text="Contact Wolf about any bugs"/><LineBreak/><Run/><LineBreak/><Run Text="Settings will be implements soon dont worry ill let you change the colours soon"/></TextBlock>
                         </Grid>
                     </TabItem>
-                    <TabItem x:Name="AddClassTab" Header="Add Subject" BorderBrush="{x:Null}" Background="{x:Null}" FontSize="16" FontFamily="/ossm;component/Fonts/#Tahoma" Margin="0,-21,7,17" IsHitTestVisible="True">
+                    <TabItem x:Name="AddClassTab" Header="Add Subject" BorderBrush="{x:Null}" Background="{x:Null}" FontSize="16" FontFamily="/ossm;component/Fonts/#Tahoma" Margin="0,-26,-16,26" IsHitTestVisible="True">
 
                         <Grid Background="White" Margin="10,0,-13,0">
                             <Label Content="Subject Code" HorizontalAlignment="Left" Margin="10,28,0,0" VerticalAlignment="Top" Height="26" Width="104"/>
@@ -60,7 +69,7 @@
                             <Label Content="Description&#xD;&#xA;" HorizontalAlignment="Left" Margin="10,90,0,0" VerticalAlignment="Top" Height="42" Width="104"/>
                             <TextBox x:Name="subjectCodeText" HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" VerticalAlignment="Top" Width="333" Margin="151,28,0,0" TextChanged="TextBox_TextChanged"/>
                             <TextBox x:Name="subjectNameBox" HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" VerticalAlignment="Top" Width="333" Margin="151,62,0,0" TextChanged="TextBox_TextChanged"/>
-                            <TextBox x:Name="subjectDescBox" HorizontalAlignment="Left" Height="282" Margin="151,104,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="333"/>
+                            <TextBox x:Name="subjectDescBox" HorizontalAlignment="Left" Height="248" Margin="151,104,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="333"/>
                             <Button x:Name="AddSubject" Content="Add Subject" HorizontalAlignment="Left" Margin="15,197,0,0" VerticalAlignment="Top" Width="112" Height="30" Click="AddSubjectClick"/>
                         </Grid>
 
@@ -68,10 +77,12 @@
 
 
                 </TabControl>
-                <Label Content="OSSM" HorizontalContentAlignment="Center" HorizontalAlignment="Stretch" Width="auto" VerticalAlignment="Bottom" Height="47" Foreground="White" FontSize="26.667" Margin="0,0,533,402" >
-                    <Label.Background>
-                        <SolidColorBrush Color="ForestGreen"/>
-                    </Label.Background>
+                <Button x:Name="Close" Content="X" HorizontalAlignment="Left" VerticalAlignment="Bottom" Width="35" Grid.Column="2" Margin="4,-1,-4,415" Background="{x:Null}" RenderTransformOrigin="1.083,0.551" Foreground="Gray" BorderBrush="{x:Null}" Click="CloseButton" Height="35" Grid.ColumnSpan="2" FontWeight="Bold" FontSize="14"/>
+                <Button x:Name="Minimise" Content="-" HorizontalAlignment="Left" VerticalAlignment="Bottom" Width="35" Grid.Column="1" Margin="460,-1,0,415" Background="{x:Null}" RenderTransformOrigin="1.083,0.551" Foreground="Gray" BorderBrush="{x:Null}" Click="MinimiseButton" Height="35" FontWeight="Bold" FontFamily="Wide Latin" FontSize="16" Grid.ColumnSpan="2"/>
+                <Label Content="OSSM" HorizontalContentAlignment="Left" HorizontalAlignment="Left" Width="480" VerticalAlignment="Bottom" Height="77" Foreground="White" FontSize="26.667" Margin="0,-1,0,373" RenderTransformOrigin="0.5,0.5" Grid.ColumnSpan="2" ScrollViewer.HorizontalScrollBarVisibility="Auto" Background="#FF626789" >
+                    <Label.Effect>
+                        <DropShadowEffect Opacity="0.2" BlurRadius="15" RenderingBias="Quality" ShadowDepth="2" Color="#FF626789"/>
+                    </Label.Effect>
                 </Label>
             </Grid>
         </Grid>

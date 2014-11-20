@@ -95,6 +95,10 @@ namespace ossm
             //closes main window which causes appDriver to save
             this.Close();
         }
+        private void WindowMouseLeftButtonDown(object sender, MouseButtonEventArgs e)
+        {
+            DragMove();
+        }
 
         private void ClassComboBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
@@ -169,6 +173,16 @@ namespace ossm
            //closeAndSave();
 
 
+       }
+
+       private void CloseButton(object sender, System.Windows.RoutedEventArgs e)
+       {
+       	this.Close();
+       }
+
+       private void MinimiseButton(object sender, System.Windows.RoutedEventArgs e)
+       {
+           this.WindowState = WindowState.Minimized;
        }
        //protected override void OnClosing(System.ComponentModel.CancelEventArgs e)
        //{
