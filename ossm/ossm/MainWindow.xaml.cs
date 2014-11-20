@@ -98,7 +98,17 @@ namespace ossm
 
         private void ClassComboBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
-          
+            ComboBox test = ClassComboBox;
+            string text = test.SelectedItem.ToString();
+
+            for (int i = 0; i < subjects.Count; i++)
+            {
+                if (subjects[i].getCode() == text)
+                {
+                    Window subjectDetailWindow = new SubjectDetails(subjects[i], _appDriver);
+                    subjectDetailWindow.Show();
+                }
+            }
             
             
         }
