@@ -52,7 +52,7 @@ namespace ossm
     public class appDriver : ISerializable
     {
         //public static appDriver() { }
-        public static readonly string _FILE_PATH = System.Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments)+"\\" +"OSSM"+"\\"+"Save.OSSM";
+        public static readonly string _FILE_PATH = System.Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments)+"\\" +"OSSM"+"\\"+"Save.DAT";
 
    
         public List<Subject> subjects = new List<Subject>();
@@ -85,11 +85,18 @@ namespace ossm
         }
         public static void saveToFile(appDriver _appDriver)
         {
-            using (FileStream fileStream = new FileStream(_FILE_PATH, FileMode.OpenOrCreate))
+            try
             {
-                BinaryFormatter BinForm = new BinaryFormatter();
-                BinForm.Serialize(fileStream, _appDriver);
-                fileStream.Close();
+                using (FileStream fileStream = new FileStream(_FILE_PATH, FileMode.OpenOrCreate))
+                {
+                    BinaryFormatter BinForm = new BinaryFormatter();
+                    BinForm.Serialize(fileStream, _appDriver);
+                    fileStream.Close();
+                }
+            }
+            catch (System.IO.DirectoryNotFoundException e)
+            {
+               
             }
         }
         public static appDriver loadFromFile()

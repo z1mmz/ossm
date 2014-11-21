@@ -127,11 +127,11 @@ namespace ossm
             
         }
         //onclose overide to make appDriver save
-        protected override void OnClosing(System.ComponentModel.CancelEventArgs e)
-        {
-            appDriver.saveToFile(_appDriver);
-            base.OnClosing(e);
-        }
+        //protected override void OnClosing(System.ComponentModel.CancelEventArgs e)
+        //{
+        //    appDriver.saveToFile(_appDriver);
+        //    base.OnClosing(e);
+        //}
 
        private void timeTableButton_Click(object sender, RoutedEventArgs e)
        {
@@ -170,6 +170,8 @@ namespace ossm
 
        private void CloseButton(object sender, System.Windows.RoutedEventArgs e)
        {
+           appDriver.saveToFile(_appDriver);
+           this.Close();
            Application.Current.Shutdown();
        }
 

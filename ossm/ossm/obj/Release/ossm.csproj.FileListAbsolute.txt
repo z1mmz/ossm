@@ -32,3 +32,4 @@ C:\Users\wolf\Documents\Visual Studio 2013\Projects\ossm\ossm\ossm\obj\Release\o
 C:\Users\wolf\Documents\Visual Studio 2013\Projects\ossm\ossm\ossm\obj\Release\ossm.application
 C:\Users\wolf\Documents\Visual Studio 2013\Projects\ossm\ossm\ossm\obj\Release\ossm.exe
 C:\Users\wolf\Documents\Visual Studio 2013\Projects\ossm\ossm\ossm\obj\Release\ossm.pdb
+C:\Users\wolf\Documents\Visual Studio 2013\Projects\ossm\ossm\ossm\obj\Release\ossm.csprojResolveAssemblyReference.cache

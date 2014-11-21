@@ -8,7 +8,10 @@
     ResizeMode="CanMinimize"
 	Title="Open Source Study Manager Project ALPHA 0.01"
 	Width="640" Height="480" MouseLeftButtonDown="WindowMouseLeftButtonDown" >
-	<Grid x:Name="LayoutRoot">
+    <Window.Effect>
+        <DropShadowEffect BlurRadius="10"/>
+    </Window.Effect>
+    <Grid x:Name="LayoutRoot" Margin="-11,0,-12,-17">
 		<Grid.RowDefinitions>
 			<RowDefinition Height="47*"/>
 			<RowDefinition Height="404*"/>
