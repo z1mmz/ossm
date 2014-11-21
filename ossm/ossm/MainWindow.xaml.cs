@@ -94,7 +94,7 @@ namespace ossm
         private void ClassComboBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
             ComboBox test = ClassComboBox;
-            if (!(test.SelectedItem.ToString() == null))
+            if (!(test.SelectedItem == null))
             {
                 string text = test.SelectedItem.ToString();
 
@@ -170,7 +170,7 @@ namespace ossm
 
        private void CloseButton(object sender, System.Windows.RoutedEventArgs e)
        {
-       	this.Close();
+           Application.Current.Shutdown();
        }
 
        private void MinimiseButton(object sender, System.Windows.RoutedEventArgs e)
