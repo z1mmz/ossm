@@ -2,6 +2,7 @@ ossm
 ====
 
 Open source study management
+Design advisor: Mickmoffat
 Coders:
 Zimmz
-//more coders to join
+
