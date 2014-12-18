@@ -107,5 +107,34 @@ namespace ossm
                 }
             }
         }
+
+        private void Drop(object sender, DragEventArgs e)
+        {
+            if (e.Data.GetDataPresent(DataFormats.FileDrop))
+            {
+                string[] files = (string[])e.Data.GetData(DataFormats.FileDrop);
+                
+                for (int i = 0; i < files.Length; i++)
+                {
+                    FileInfo fi = new FileInfo(files[i]);
+                    if (Directory.Exists(files[i]))
+                    {
+                        string[] folderFileNames = Directory.GetFiles(files[i]);
+                        for (int x = 0; x < folderFileNames.Length; x++)
+                        {
+                            FileInfo folderFi = new FileInfo(folderFileNames[x]);
+                            File.Copy(folderFileNames[x], subjectFilePath + "\\" + folderFi.Name);
+                        }
+                    }
+                    else
+                    {
+                        File.Copy(files[i], subjectFilePath + "\\" + fi.Name);
+                    }
+                    fileNames.Clear();
+                    populateFileList();
+                    FileListBox.Items.Refresh();
+                }
+            }
+        }
     }
 }

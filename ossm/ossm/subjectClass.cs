@@ -6,12 +6,29 @@ using System.Threading.Tasks;
 
 namespace ossm
 {
-    class SubjectClass
+    
+    public class SubjectClass
     {
-        public Boolean Save()
+        private string time;
+        private string day;
+        private string code;
+        public SubjectClass(string time, string day, string code)
         {
-            // save objects here
-            return true;
+            this.time = time;
+            this.day = day;
+            this.code = code;
+        }
+        public string getTime()
+        {
+            return time;
+        }
+        public string getDay()
+        {
+            return day;
+        }
+        public string getCode()
+        {
+            return code;
         }
     }
 }

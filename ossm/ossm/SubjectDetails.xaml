@@ -8,11 +8,13 @@
             <ColumnDefinition Width="247*"/>
             <ColumnDefinition Width="331*"/>
         </Grid.ColumnDefinitions>
+        <ScrollViewer Grid.Column="1">
         <TextBlock x:Name="subjectDescBlock" ScrollViewer.CanContentScroll="True" Height="auto" Margin="10,10,0,0" TextWrapping="Wrap" Text="subjectDesc" VerticalAlignment="Top" Grid.Column="1" HorizontalAlignment="Left" Width="auto"/>
+        </ScrollViewer>
         <TextBlock x:Name="SubjectCodeBlock" HorizontalAlignment="Left" Height="auto" Margin="10,10,0,0" TextWrapping="Wrap" Text="SubjectCode" VerticalAlignment="Top" Width="auto"/>
         <TextBlock x:Name="subjectNameBlock" HorizontalAlignment="Left" Height="auto" Margin="10,68,0,0" TextWrapping="Wrap" Text="subjectName" VerticalAlignment="Top" Width="auto"/>
         <ListBox x:Name="assListBox" Grid.Column="2" HorizontalAlignment="Left" Height="74" Margin="19,10,0,0" VerticalAlignment="Top" Width="290"/>
-        <ListBox x:Name="FileListBox" Grid.Column="2" HorizontalAlignment="Left" Height="168" Margin="19,102,0,0" VerticalAlignment="Top" Width="290" MouseDoubleClick="FileListBoxSelect"/>
+        <ListBox x:Name="FileListBox" AllowDrop="True" Grid.Column="2" HorizontalAlignment="Left" Height="168" Margin="19,102,0,0" VerticalAlignment="Top" Width="290" MouseDoubleClick="FileListBoxSelect" Drop="Drop"/>
 
     </Grid>
 </Window>

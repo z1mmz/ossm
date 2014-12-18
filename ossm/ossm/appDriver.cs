@@ -55,7 +55,7 @@ namespace ossm
         public static readonly string _FILE_PATH = System.Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments)+"\\" +"OSSM"+"\\"+"Save.DAT";
 
    
-        public List<Subject> subjects = new List<Subject>();
+        public  List<Subject> subjects = new List<Subject>();
 
         public appDriver()
         {
@@ -83,6 +83,7 @@ namespace ossm
             info.AddValue("subjects", subjects);
          
         }
+        
         public static void saveToFile(appDriver _appDriver)
         {
             try

@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -12,6 +13,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using System.IO;
 
 namespace ossm
 {
@@ -59,6 +61,9 @@ namespace ossm
             //Window test = new Window2();
             //test.Show();
             DataContext = this.DataContext;
+            
+            //timeTable.Columns.Add(new DataGridColumn("Mon",typeof(string)));
+            
         
         }
 
@@ -135,7 +140,8 @@ namespace ossm
 
        private void timeTableButton_Click(object sender, RoutedEventArgs e)
        {
-
+           Window timeTableWindow = new TimeTableWindow(_appDriver);
+           timeTableWindow.Show();
        }
        private void TextBox_TextChanged(object sender, TextChangedEventArgs e)
        {
@@ -149,6 +155,9 @@ namespace ossm
                string code = subjectCodeText.Text;
                string name = subjectNameBox.Text;
                string desc = subjectDescBox.Text;
+               subjectCodeText.Clear();
+               subjectDescBox.Clear();
+               subjectNameBox.Clear();
                _appDriver.addSubject(code, desc, name);
            }
            
@@ -194,12 +203,34 @@ namespace ossm
            {
                if (subjects[i].getCode() == text)
                {
+                   string pathToDelete = subjects[i].filePath;
+                   
                    _appDriver.subjects.Remove(subjects[i]);
+                   Directory.Delete(@pathToDelete,true);
                }
            }
            fillComboBox();
 
        }
+
+          private void Button_Click(object sender, RoutedEventArgs e)
+          {
+              ComboBox test = ClassComboBox;
+              if (!(test.SelectedItem == null))
+              {
+                  string text = test.SelectedItem.ToString();
+
+                  for (int i = 0; i < subjects.Count; i++)
+                  {
+                      if (subjects[i].getCode() == text)
+                      {
+                          Window subjectDetailWindow = new SubjectDetails(subjects[i], _appDriver);
+                          subjectDetailWindow.Show();
+                      }
+                  }
+              }
+
+          }
        //protected override void OnClosing(System.ComponentModel.CancelEventArgs e)
        //{
        //    //appDriver.saveToFile(_appDriver);

@@ -38,7 +38,7 @@ namespace ossm
         public string subjectCode { get; set; }
         public string subjectDesc { get; set; }
         public string subjectName { get; set; }
-        private SubjectClass[] classes { get; set; }
+        public List<SubjectClass> classes;
         private List<Assignment> assignments;
         public string filePath;
 
@@ -78,6 +78,11 @@ namespace ossm
         {
             List<Assignment> derp = assignments;
             return derp;
+        }
+        public void addClass(string time, string day)
+        {
+            SubjectClass temp = new SubjectClass(time, day, subjectCode);
+            classes.Add(temp);
         }
         
 
